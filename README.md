@@ -1,6 +1,6 @@
 # _{Repo Name}_
 
-#### By _**{Author}**_
+#### By _**Alejandro Socarras, Austin Moos, Matthew Belcher**_
 
 #### _{Brief Description}_
 
