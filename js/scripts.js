@@ -22,41 +22,16 @@ function pigLatin(text) {
   return outPutArray.join(" ");
 }
 
-    // if first letter is vowel, add "way" to end of word
-    // else
-      // For each letter in text, check if it's a vowel.
-      // Stop the loop with: return text.slice(index) + text.slice(0,index) + "ay"
+// UI Interface
 
+window.addEventListener("load", function() {
 
-/////// slice() EXAMPLES
-// let sentence === "triple rat"; 
-//                   0123456789
-// sentence.slice(1) === "riple rat";
-// sentence.slice(2,6) === "iple "
-// sentence.slice(2) + sentence.slice(0,2) + "ay"
-//    === "iple" + "tr" + ay === "ipletray"
+  const form = document.querySelector("form");
 
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const sentenceInput = document.getElementById("sentenceInput").value;
+    form.after(pigLatin(sentenceInput));
 
-////// Test three function
-// // function pigLatin(text) {
-//   // e.g. text = "sample"
-//   // sample[0] = "s", sample[1] = "a", etc. 
-//   const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]; 
-//   if (vowels.includes(text[0])) {
-//     return text + "way";
-//   } else {
-//     for (let i = 1; i < text.length; i++) {
-//       // For each letter in text, check if it's a vowel.
-//       if (vowels.includes(text[i])) {
-//       // Stop the loop with: return text.slice(index) + text.slice(0,index) + "ay"
-//         return text.slice(i) + text.slice(0,i) + "ay"
-//       }
-//     }
-//   }
-// }
-
-
-// 
-// String.prototype.slice()
-// String.prototype.includes()
-// String.prototype.indexOf()
+  });
+});
